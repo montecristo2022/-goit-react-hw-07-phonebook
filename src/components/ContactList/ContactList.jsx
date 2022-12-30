@@ -2,10 +2,10 @@ import React from 'react';
 import styles from '../ContactList/ContactList.module.css';
 import { getContacts } from 'redux/contactsListSlice';
 import { useSelector } from 'react-redux';
-import { deleteContact } from 'redux/contactsListSlice';
+//import { deleteContact } from 'redux/contactsListSlice';
 import { useDispatch } from 'react-redux';
 import { getFilter } from 'redux/contactsFilterSlice';
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 
 // import { fetchContacts } from 'redux/operations';
 import { deleteOneContact } from 'redux/operations';
