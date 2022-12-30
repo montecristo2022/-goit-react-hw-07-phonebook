@@ -1,0 +1,10 @@
+.labelText {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.inputFilter{
+    padding: 5px 20px 5px 20px;
+}

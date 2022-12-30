@@ -1,0 +1,24 @@
+.deleteButton{
+padding: 0px 10px 0px 10px;
+cursor: pointer;
+}
+
+
+.contactsWrapper{
+    margin-top: 30px;
+    width: 500px;
+}
+
+.oneContact{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.oneContact:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.oneContactText{
+font-size: 30px;
+}
