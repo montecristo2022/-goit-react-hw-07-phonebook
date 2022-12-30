@@ -28,7 +28,8 @@ export const contactListSlice = createSlice({
       state.myContacts = action.payload;
     },
     [fetchContacts.rejected]: handleRejected,
-  },
+ 
+  [addOneContact.pending]: handlePending,
   [addOneContact.fulfilled](state, action) {
     console.log('это фулфилд');
     state.isLoading = false;
@@ -46,6 +47,7 @@ export const contactListSlice = createSlice({
     state.myContacts.splice(index, 1);
   },
   [deleteOneContact.rejected]: handleRejected,
+},
 });
 
 export const contactReducer = contactListSlice.reducer;
