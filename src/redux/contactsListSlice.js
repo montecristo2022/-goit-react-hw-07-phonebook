@@ -15,8 +15,6 @@ export const contactListSlice = createSlice({
   name: 'ListOfContacts',
   initialState: {
     myContacts: [],
-    // { id: '1', name: 'Alfredo Gaspacho', number: '285-34-99999' },
-    // { id: '2', name: 'Alfredo Bagmeto', number: '777777' }
     isLoading: false,
     error: null,
   },
@@ -53,3 +51,4 @@ export const contactListSlice = createSlice({
 export const contactReducer = contactListSlice.reducer;
 
 export const getContacts = state => state.myListOfContacts;
+export const getLoader = state => state.myListOfContacts;

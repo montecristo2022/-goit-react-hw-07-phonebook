@@ -2,16 +2,14 @@ import React from 'react';
 import styles from '../ContactList/ContactList.module.css';
 import { getContacts } from 'redux/contactsListSlice';
 import { useSelector } from 'react-redux';
-//import { deleteContact } from 'redux/contactsListSlice';
 import { useDispatch } from 'react-redux';
 import { getFilter } from 'redux/contactsFilterSlice';
-//import { useEffect } from 'react';
-
-// import { fetchContacts } from 'redux/operations';
 import { deleteOneContact } from 'redux/operations';
+import { getLoader } from 'redux/contactsListSlice';
 
 export const ContactList = () => {
   const contactsArray = useSelector(getContacts).myContacts;
+  const loader = useSelector(getLoader).isLoading
 
   const dispatch = useDispatch();
 
@@ -24,6 +22,8 @@ export const ContactList = () => {
   );
 
   return (
+  <>
+  {loader && <p>Loading...</p>}
     <ul className={styles.contactsWrapper}>
       {visibleContacts.map(({ id, name, number }) => {
         return (
@@ -45,5 +45,6 @@ export const ContactList = () => {
         );
       })}
     </ul>
+  </>
   );
 };
